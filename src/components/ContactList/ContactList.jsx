@@ -1,4 +1,5 @@
 import styles from './ContactList.module.css';
+import PropTypes from 'prop-types';
 
 const ContactList = ({ contacts, onRemove, children }) => {
   return (
@@ -30,6 +31,11 @@ const ContactList = ({ contacts, onRemove, children }) => {
       </ul>
     </div>
   );
+};
+ContactList.propTypes = {
+  contacts: PropTypes.array,
+  children: PropTypes.string,
+  onRemove: PropTypes.func,
 };
 
 export default ContactList;
